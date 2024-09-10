@@ -1,0 +1,26 @@
+//? Easing
+$ease-out-quad: cubic-bezier(0.5, 1, 0.89, 1);
+$ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+//?Colors
+$color-primary: var(--primary);
+$color-secondary: var(--secondary);
+$color-alternate--1: var(--alternate--1);
+$color-alternate--2: var(--alternate--2);
+$color-alternate--3: var(--alternate--3);
+$color-primary--opacity: var(--primary--opacity);
+
+//?Breakpoints
+$breakpoint-bigScreen: 1920px;
+$breakpoint-laptop: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 500px;
+
+//? Easing
+$expo-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+//? Padding
+$padding-page: 3.2rem;
+$padding-wrapper: 12rem;
+$padding-container: 12rem;

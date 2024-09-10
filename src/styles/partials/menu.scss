@@ -1,0 +1,103 @@
+.menu {
+    position: fixed;
+    top: 11rem;
+    left: 32rem;
+    width: 43.6rem;
+
+    z-index: 800;
+    pointer-events: none;
+
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-mobile) {
+        top: 6rem;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding: 1.6rem;
+    }
+
+    .menu_wrapper {
+        border-radius: 1.6rem;
+        padding: 3.2rem;
+        background-color: var(--primary--opacity);
+        backdrop-filter: blur(2rem);
+        color: $color-secondary;
+        visibility: hidden;
+        opacity: 0;
+
+        .menu_row {
+            display: flex;
+            gap: 3.2rem;
+            @media (max-width: $breakpoint-mobile) {
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 6.4rem;
+            }
+
+            .menu_row_pages {
+                li {
+                    width: fit-content;
+                    h1 {
+                        @extend %title-h3;
+                    }
+                }
+            }
+
+            .menu_row_categories {
+                li {
+                    width: fit-content;
+                    h1 {
+                        @extend %title-h3;
+                    }
+                }
+            }
+
+            .menu_row_social {
+                justify-content: flex-end;
+                display: inline-flex;
+                gap: 1rem;
+                @media (max-width: $breakpoint-mobile) {
+                    text-align: unset;
+                }
+            }
+        }
+
+        .menu_row_pages,
+        .menu_row_categories {
+            &:before {
+                display: block;
+                @extend %paragraph;
+                margin-bottom: 3.2rem;
+                color: $color-alternate--3;
+            }
+        }
+        .menu_row_pages {
+            &:before {
+                content: 'Pages';
+            }
+        }
+        .menu_row_categories {
+            &:before {
+                content: 'Collections';
+            }
+        }
+        .menu_row_social {
+            a {
+                width: fit-content;
+                opacity: 0.75;
+                @extend %animation-hover-link;
+
+                &:hover {
+                    opacity: 1;
+                    @extend %animation-hover-link;
+                }
+            }
+        }
+    }
+
+    &.--active {
+        visibility: visible;
+        pointer-events: auto;
+    }
+}

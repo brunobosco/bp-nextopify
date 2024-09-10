@@ -1,0 +1,54 @@
+.products {
+    padding-top: 16rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    .products_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.2rem;
+    }
+}
+
+.products_container {
+    display: flex;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.products_item {
+    position: relative;
+    width: fit-content;
+    padding-top: 16rem;
+
+    .products_title {
+        margin-top: 0.32rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .products_price {
+        margin-top: 1.6rem;
+        display: inline-flex;
+        gap: 0.4rem;
+    }
+
+    .products_figure_small {
+        position: relative;
+        width: 30rem;
+        height: 30rem;
+        background-color: black;
+        overflow: hidden;
+    }
+    .products_figure_big {
+        position: relative;
+        width: 59.9rem;
+        height: 59.9rem;
+        background-color: black;
+        overflow: hidden;
+    }
+    .products_image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

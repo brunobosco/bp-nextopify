@@ -1,0 +1,16 @@
+@import './base/reset';
+
+@import './utils/_variables';
+@import './utils/_sizes';
+@import './utils/_mixins';
+
+@import './base/font';
+@import './base/base';
+@import './base/animation';
+
+@import './partials/header';
+@import './partials/menu';
+@import './partials/footer';
+
+@import './components/system';
+@import './components/slider';

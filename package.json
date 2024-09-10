@@ -1,20 +1,25 @@
 {
-  "name": "bp-nextopify",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4"
-  },
-  "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4"
-  }
+    "name": "bp-nextopify",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@shopify/storefront-api-client": "^1.0.0",
+        "next": "14.2.4",
+        "react": "^18",
+        "react-dom": "^18",
+        "sass": "^1.77.6"
+    },
+    "devDependencies": {
+        "eslint": "^8",
+        "eslint-config-next": "14.2.4",
+        "gsap": "^3.12.5",
+        "lenis": "^1.1.4",
+        "swiper": "^11.1.4"
+    }
 }

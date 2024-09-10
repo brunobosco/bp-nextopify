@@ -1,0 +1,156 @@
+section.footer {
+    position: relative;
+    padding: 1.6rem;
+
+    .footer_separator {
+        border-top: 1px solid $color-primary;
+        margin-bottom: 6.4rem;
+    }
+
+    .footer_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12.8rem;
+        @extend %outline;
+
+        .footer_row {
+            position: relative;
+        }
+
+        .footer_row:nth-child(1),
+        .footer_row:nth-child(2) {
+            display: flex;
+            gap: 6.4rem;
+            @media (max-width: $breakpoint-mobile) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .footer_row_col:nth-child(1) {
+                flex: 1;
+
+                h3 {
+                    margin-bottom: 3.2rem;
+                }
+                p {
+                    // padding-right: 23.7rem;
+                    opacity: 0.75;
+                    width: 48rem;
+                }
+            }
+
+            .footer_row_col:nth-child(2) {
+                flex: 0.5;
+                grid-area: auto / c6 / auto / c7;
+
+                a {
+                    width: fit-content;
+                }
+            }
+
+            .footer_row_col:nth-child(3) {
+                flex: 0.5;
+                grid-area: auto / c8 / auto / c10;
+                a {
+                    width: fit-content;
+                }
+            }
+
+            .footer_row_col:nth-child(4) {
+                grid-area: auto / c11 / auto / c12;
+                text-align: end;
+
+                div {
+                    a {
+                        width: fit-content;
+                        opacity: 0.75;
+                        @extend %animation-hover-link;
+
+                        &:hover {
+                            opacity: 1;
+                            @extend %animation-hover-link;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer_row:nth-child(1) {
+            @media (max-width: $breakpoint-mobile) {
+                row-gap: 6.4rem;
+            }
+
+            .footer_row_col {
+                &:before {
+                    display: block;
+                    @extend %paragraph;
+                    margin-bottom: 3.2rem;
+                    color: $color-alternate--3;
+                }
+            }
+
+            .footer_row_col:nth-child(2) {
+                &:before {
+                    content: 'Pages';
+                }
+
+                @media (max-width: $breakpoint-mobile) {
+                    width: 50%;
+                }
+            }
+
+            .footer_row_col:nth-child(3) {
+                &:before {
+                    content: 'Categories';
+                }
+            }
+
+            .footer_row_col:nth-child(4) {
+                &:before {
+                    content: 'Social';
+                }
+                .footer_row_col_container {
+                    display: inline-flex;
+                    gap: 1rem;
+                }
+
+                @media (max-width: $breakpoint-mobile) {
+                    text-align: unset;
+                }
+            }
+        }
+
+        .footer_row:nth-child(2) {
+            align-items: flex-end;
+            @media (max-width: $breakpoint-mobile) {
+                row-gap: 1.6rem;
+            }
+
+            .footer_row_col:nth-child(2) {
+                grid-area: auto / c5 / auto / c7;
+            }
+            .footer_row_col:nth-child(3) {
+                display: inline-flex;
+                gap: 0.4rem;
+
+                a {
+                    @extend %span;
+                    color: $color-alternate--3;
+                }
+            }
+
+            .footer_row_col:nth-child(4) {
+                @extend %span;
+                color: $color-alternate--2;
+                cursor: pointer;
+
+                @extend %anim-pulse;
+                @media (max-width: $breakpoint-mobile) {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

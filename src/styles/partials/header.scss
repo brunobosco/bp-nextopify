@@ -1,0 +1,105 @@
+header.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+    padding: 1.6rem 32rem;
+
+    .header_wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 1.6rem;
+        padding: 3.2rem;
+        background-color: var(--primary--opacity);
+        backdrop-filter: blur(2rem);
+
+        .header_navigation {
+            display: flex;
+            gap: 3.2rem;
+            width: fit-content;
+
+            .header_navigation_pages {
+                display: flex;
+                gap: 1.6rem;
+            }
+
+            .navigation_menu {
+                position: relative;
+                overflow: hidden;
+                height: 2.4rem;
+                padding-right: 1.6rem;
+
+                @media (max-width: $breakpoint-mobile) {
+                    grid-area: c4;
+                }
+
+                .navigation_menu_container {
+                    display: flex;
+                    flex-direction: column;
+                    transform: translateY(-4%);
+
+                    .navigation_menu_container_item {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+
+                        svg {
+                            width: 3rem;
+                            height: 3rem;
+
+                            line {
+                                stroke: $color-secondary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header_logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .header_cart {
+            button {
+                font-family: $font-primary;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    @extend %padding;
+    padding-bottom: 0;
+
+    z-index: 900;
+
+    .navigation_wrapper {
+        @extend %grid;
+        margin-bottom: 1rem;
+        @extend %outline;
+        padding-left: 0;
+        padding-right: 0;
+
+        &.--filled {
+            background-color: $color-primary;
+            transition: background-color 0.24s ease-in-out;
+        }
+    }
+
+    .navigation_menu {
+        display: block;
+    }
+}

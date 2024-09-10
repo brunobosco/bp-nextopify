@@ -1,0 +1,53 @@
+$font-primary: 'Mori';
+
+%title-big {
+    font-family: $font-primary;
+    font-size: 16rem;
+    font-weight: bold;
+    @media (max-width: $breakpoint-tablet) {
+        font-size: 7.2rem;
+    }
+}
+
+%title-h1 {
+    font-family: $font-primary;
+    font-size: 6.8rem;
+}
+
+%title-h2 {
+    font-family: $font-primary;
+    font-size: 5rem;
+}
+
+%title-h3 {
+    font-family: $font-primary;
+    font-size: 4rem;
+}
+
+%title-h4 {
+    font-family: $font-primary;
+    font-size: 3rem;
+}
+
+%title-h5 {
+    font-family: $font-primary;
+    font-size: 2.6rem;
+}
+
+%paragraph {
+    font-family: $font-primary;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+%span {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+%label {
+    font-family: $font-primary;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}

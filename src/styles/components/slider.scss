@@ -1,0 +1,99 @@
+.slider {
+    position: relative;
+    width: 100%;
+
+    .slider_wrapper {
+        position: relative;
+        overflow: hidden;
+
+        .slider_container_heading {
+            @extend %grid;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 6.4rem;
+
+            .slider_container_heading_tag {
+                grid-area: auto / c1 / auto / c4;
+            }
+            .slider_container_heading_title {
+                grid-area: auto / c5 / auto / c8;
+            }
+            .slider_container_heading_arrows {
+                grid-area: c12;
+                position: relative;
+                display: inline-flex;
+                justify-content: space-between;
+            }
+        }
+
+        .slider_container_slide {
+            // width: auto !important;
+
+            @media (max-width: $breakpoint-mobile) {
+                .container_item {
+                    width: 43.4rem;
+                    .container_item_media {
+                        height: 100%;
+                    }
+                }
+            }
+
+            .slider_container_item_title {
+                margin-top: 6.4rem;
+            }
+        }
+
+        .slider_extra {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48rem;
+            margin-top: 3.2rem;
+        }
+    }
+
+    .slider_info {
+        margin-top: 3.2rem;
+        padding-top: 3.2rem;
+
+        .slider_info_wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+
+//? Swiper Custom components
+// .swiper {
+//     display: flex !important;
+//     flex-direction: column-reverse !important;
+// }
+.swiper-wrapper {
+    display: flex !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: $color-alternate--1;
+    width: 6rem;
+    height: 6rem;
+    padding: 1.6rem;
+    border-radius: 1.6rem;
+    cursor: pointer;
+
+    @extend %paragraph;
+}
+
+.swiper-pagination {
+    .swiper-pagination-bullet {
+        background-color: $color-alternate--3;
+    }
+}
+.swiper-pagination-horizontal {
+    top: unset !important;
+    bottom: 3.2rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: unset !important;
+}

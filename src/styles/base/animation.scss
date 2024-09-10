@@ -1,0 +1,117 @@
+li {
+    a {
+        position: relative;
+        width: fit-content;
+
+        &::after {
+            content: '\2197';
+            position: absolute;
+            right: -1.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            @extend %animation-hover-link;
+        }
+        &:hover::after {
+            content: '\2197';
+            position: absolute;
+            right: -2.4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+            @extend %animation-hover-link;
+            color: $color-alternate--2;
+        }
+
+        &:hover {
+            color: $color-alternate--2;
+            @extend %animation-hover-link;
+        }
+    }
+}
+
+//? Hover line animation
+.hover {
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    transition: 0.64s opacity ease;
+    &::before,
+    &::after {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        top: 96%;
+        left: 0;
+        pointer-events: none;
+    }
+    &::before {
+        content: '';
+    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            opacity: 0.75;
+            transition: opacity 0.64s ease;
+        }
+    }
+}
+.hover--link {
+    &::before {
+        transform-origin: 100% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: transform 0.3s;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover::before {
+            transform-origin: 0% 50%;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+}
+.hover--case {
+    &::before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+        transition: transform 0.3s;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover::before {
+            transform-origin: 100% 50%;
+            transform: scale3d(0, 5, 1);
+        }
+    }
+}
+.hover--dir {
+    &::before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+        transition: transform 0.64s 60ms ease;
+        opacity: 0.3;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover::before {
+            transform-origin: 100% 50%;
+            transform: scale3d(0, 2, 1);
+        }
+    }
+}
+
+// Keyframes animations
+@keyframes arrow-button-animation {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    40% {
+        transform: translate3d(101%, -101%, 0);
+        color: $color-alternate--3;
+    }
+    60% {
+        transform: translate3d(-100%, 100%, 0);
+        color: $color-alternate--3;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
