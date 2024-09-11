@@ -1,8 +1,8 @@
 import { createStorefrontApiClient } from '@shopify/storefront-api-client';
 
 const client = createStorefrontApiClient({
-    storeDomain: 'https://urbanthm.myshopify.com',
-    publicAccessToken: 'f0485822f4e1f177aca26b71aa90ae48',
+    storeDomain: process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN,
+    publicAccessToken: process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
     apiVersion: '2024-04',
 });
 
